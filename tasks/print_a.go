@@ -8,16 +8,16 @@ import (
 
 type PrintATask struct{}
 
-func NewPrintATask() PrintATask {
-	return PrintATask{}
+func NewPrintATask() *PrintATask {
+	return &PrintATask{}
 }
 
-func (t PrintATask) Run(reqCtx *types.ReqContext) error {
+func (t *PrintATask) Run(reqCtx *types.ReqContext) error {
 	fmt.Println("A")
 	time.Sleep(1 * time.Second)
 	return nil
 }
 
-func (t PrintATask) Deps() []string {
+func (t *PrintATask) Deps() []string {
 	return []string{}
 }

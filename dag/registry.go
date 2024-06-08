@@ -6,10 +6,11 @@ import (
 )
 
 var testTasks = map[string]Task{
-	"print_a": tasks.NewPrintATask(),
-	"print_b": tasks.NewPrintBTask(),
-	"print_c": tasks.NewPrintCTask(),
-	"print_d": tasks.NewPrintDTask(),
+	"print_a":   tasks.NewPrintATask(),
+	"print_b":   tasks.NewPrintBTask(),
+	"print_c":   tasks.NewPrintCTask(),
+	"print_d":   tasks.NewPrintDTask(),
+	"print_e_f": tasks.NewBatchPrintEFTask(),
 }
 
 func NewTestDag(reqCtx *types.ReqContext) *Runner {
